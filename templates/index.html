@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if streik %}
+    <h2 id="answer" class="Ja">Ja</h2>
+{% else %}
+    <h2 id="answer" class="Nein">Nein</h2>
+{% endif %}
+
+{# <div id="map"></div> #}
+
+{% endblock %}
