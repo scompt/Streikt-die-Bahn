@@ -24,6 +24,7 @@ from models import State
 # 	return values
 
 # TODO: Use Post for toggle and newState
+# TODO: Clear memcache.
 class ManagerHandler(webapp.RequestHandler):
 	def get(self):
 		if 'toggle' in self.request.queryvars:
