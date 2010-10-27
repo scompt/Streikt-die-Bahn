@@ -44,15 +44,8 @@ class JsonHandler(webapp.RequestHandler):
 	def get(self):
 		self.response.out.write(json.dumps(template_values()))
 
-class ManagerHandler(webapp.RequestHandler):
-	def get(self):
-		s = State(name="Bayern", abbreviation="BY", striking = False)
-		s.put()
-		memcache.delete("template_values")
-		self.response.out.write("asdf")
-
 def main():
-	application = webapp.WSGIApplication([('/', MainHandler), ('/streik.json', JsonHandler), ('/manager/', ManagerHandler)], debug=True)
+	application = webapp.WSGIApplication([('/', MainHandler), ('/streik.json', JsonHandler),], debug=True)
 	util.run_wsgi_app(application)
 
 if __name__ == '__main__':
