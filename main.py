@@ -45,7 +45,7 @@ class JsonHandler(webapp.RequestHandler):
 		self.response.out.write(json.dumps(template_values()))
 
 def main():
-	application = webapp.WSGIApplication([('/', MainHandler), ('/streik.json', JsonHandler),], debug=True)
+	application = webapp.WSGIApplication([('/', MainHandler), ('/streik.json', JsonHandler),], debug=False)
 	util.run_wsgi_app(application)
 
 if __name__ == '__main__':
