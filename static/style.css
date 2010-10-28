@@ -313,18 +313,25 @@ footer {
 #links ul {
 	margin-left: 0;
 	padding-left: 0;
-	} 
+} 
 
 #links ul li {
 	margin-left: 0;
 	padding: 3px 15px;
 	border-left: 1px solid #000;
 	list-style: none;
-	}
-
+}
 
 #links ul li:first-child {
 	margin-left: 0;
 	border-top: 1px solid #000;
 	list-style: none;
-	}
+}
+
+#ads {
+	bottom: 0px;
+	position: absolute;
+	left: 0px;
+	border-right: 1px solid #000;
+	border-top: 1px solid #000;
+}
